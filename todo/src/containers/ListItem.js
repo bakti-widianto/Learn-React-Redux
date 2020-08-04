@@ -10,11 +10,13 @@ class ListItem extends Component {
     }
 
     render() {
-        const nodes = this.props.todos.map((todo, index) => {
+        console.log(this.props.todos)
+        const nodes = this.props.todos.map((item, index) => {
             return (
                 <Item
                     key={index}
-                    todo={todo} />
+                    todo={{ ...item }}
+                />
             )
         })
         return (
